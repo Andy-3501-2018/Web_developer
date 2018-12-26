@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+DEFAULT_CHARSET = 'utf-8'
+
 WSGI_APPLICATION = 'Gallery.wsgi.application'
 
 
