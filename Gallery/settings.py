@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #我的app
     'My_page.apps.MyPageConfig',
+    'blog',
 ]
 
 MIDDLEWARE = [
