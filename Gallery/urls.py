@@ -14,8 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from . import views
+# import blog.views
 #导入static方法和settings模块用来导入media的网址和根目录
 from django.conf.urls.static import static
 from django.conf import settings
@@ -23,4 +24,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('blog/',include('blog.urls'))#django推荐的格式
+    # path('blog',blog.views.blog_page)
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)#在setting.py文件中设置好media的网址和根目录后在此处按照规定格式添加
